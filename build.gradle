@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.10.RELEASE'
+    id 'java'
+    id 'idea'
+}
+
+//compileJava {
+//    sourceCompatibility = '1.8'
+//}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web",
+            'org.springframework.boot:spring-boot-starter-data-jpa',
+            'mysql:mysql-connector-java:5.1.46',
+            'joda-time:joda-time',
+            'com.fasterxml.jackson.core:jackson-databind',
+            'com.fasterxml.jackson.core:jackson-annotations',
+            'com.fasterxml.jackson.datatype:jackson-datatype-joda',
+            'com.fasterxml.jackson.datatype:jackson-datatype-jdk8',
+            'org.jadira.usertype:usertype.extended:5.0.0.GA',
+            'javax.xml:jaxb-api:2.1',
+            'com.fasterxml.jackson.datatype:jackson-datatype-jsr310',
+            'org.hibernate:hibernate-java8:5.0.12.Final'
+
+
+
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.2'
+}
